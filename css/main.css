@@ -1,0 +1,153 @@
+* {
+    background: url(https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)  no-repeat center center fixed;
+    background-size: cover;
+    }
+    
+    h1{
+        position:relative;
+        bottom:60px;
+        font-size:70px;
+        color:black;
+        opacity:.5;
+    }
+    h2{
+        position: relative;
+        bottom:120px;
+        left:180px;
+        font-size:20px;
+        color:black;
+        opacity:.4;
+    }
+    .container {
+      
+        display: flex;
+        height: 90vh;
+        width: 105vw;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+        margin: auto;
+      }
+      
+      #game {
+        position: relative;
+        left:100px;
+        bottom:150px;
+        display:flex;
+        flex-grow:10;
+      }
+      [data-disc] {
+        width: 140px;
+        float: left;
+      }
+    
+      [data-disc="25"] {
+        width:80px;
+        height: 120px;
+        background:url(https://vignette.wikia.nocookie.net/venturian-battle-headquarters/images/f/fb/Obsidian.jpg/revision/latest?cb=20180901123820);
+      }
+      
+      [data-disc="50"] {
+        width:100px;
+        height: 200px;
+        background:url(https://vignette.wikia.nocookie.net/venturian-battle-headquarters/images/f/fb/Obsidian.jpg/revision/latest?cb=20180901123820);
+      }
+      [data-disc="75"] {
+        width:100px;
+        height: 300px;
+        background:url(https://vignette.wikia.nocookie.net/venturian-battle-headquarters/images/f/fb/Obsidian.jpg/revision/latest?cb=20180901123820);
+      }
+      [data-disc="100"] {
+        width:100px;
+        height: 400px;
+        background:url(https://vignette.wikia.nocookie.net/venturian-battle-headquarters/images/f/fb/Obsidian.jpg/revision/latest?cb=20180901123820);
+      }
+        #announce-game-won {
+            font-size: 50px;
+            text-align: center;
+        }
+      [data-tower] {
+        display: flex;
+        align-items: center;
+        transform: rotate(-90deg);
+        width: 23%;
+        height: 50px;
+        position: relative;
+        border-radius: 10px;
+        background: url(https://media.freestocktextures.com/cache/74/ed/74eddb85476a60a87706359ad64d7a2d.jpg);
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.15);
+      }
+      
+      [data-tower]:after {
+        content: " ";
+        width: 50px;
+        height: 450px;
+        border-radius: 20px;
+        position: absolute;
+        z-index: -1;
+        background:url(https://live.staticflickr.com/3086/2705644192_7421d4a9ef_b.jpg);
+        transform: translateX(-50px);
+      }
+      
+      [data-disc] {
+        display: flex;
+        border-radius: 40px;
+        position: relative;
+      }
+      
+      #announce-game-won {
+        font-style: oblique;
+      opacity:.7;
+    text-transform: uppercase;
+        font-size:80px;
+        position:relative;
+        right:500px;
+        bottom:100px;
+        text-align: center;
+      }
+      
+      .game-win {
+        animation: spiral-up 700ms ease 1;
+      }
+      
+      .selected {
+        box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.05);
+        transform: translate(2rem, 0);
+        animation: pop 300ms ease-out 1;
+      }
+      
+      .selected-tower {
+        background: url(https://media.freestocktextures.com/cache/74/ed/74eddb85476a60a87706359ad64d7a2d.jpg);;
+        box-shadow: 0 0 2px 0px rgba(255, 255, 255, 0.85);
+      }
+      
+      #moves{
+        font-style: oblique;
+      opacity:.7;
+    text-transform: uppercase;
+        font-size:40px;
+        position:relative;
+        bottom:100px;
+        right:500px;
+        text-align:center;
+      }
+      #moves:before{content:'moves: '}
+      @keyframes pop {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(2rem, 0);
+        }
+      }
+      
+      @keyframes spiral-up {
+        0% {
+          transform: rotate(-5deg);
+          margin: 0;
+        }
+        50% {
+          transform: rotate(5deg);
+          margin: 2px;
+        }
+      }
